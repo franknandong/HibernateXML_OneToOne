@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2016 2:47:24 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.fndong.user.User" table="user" catalog="hibernate" optimistic-lock="version">
+       
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+             <one-to-one name="userDetails" class="com.fndong.user.UserDetails"
+            cascade="save-update"></one-to-one>
+            
+             <property name="password" type="string">
+            	<column name="password" not-null="true" />
+       		</property>
+        	
+        	<property name="name" type="string">
+           		<column name="name" not-null="true" />
+           		
+        	</property>
+        		<property name="email" type="string">
+            	<column name="email" not-null="true" />
+        	</property>
+    </class>
+    
+</hibernate-mapping>

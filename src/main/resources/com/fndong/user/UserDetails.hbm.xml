@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2016 2:47:24 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.fndong.user.UserDetails" table="user_details" catalog="hibernate" optimistic-lock="version">
+        <id name="userDetailId" type="java.lang.Integer">
+            <column name="user_id" />
+             <generator class="foreign">
+                <param name="property">user</param>
+            </generator>
+        </id>
+        
+        <one-to-one name="user" class="com.fndong.user.User" constrained="true">
+        </one-to-one>
+        
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="poscode" type="string">
+            <column name="poscode" length="10" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

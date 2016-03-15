@@ -1,6 +1,8 @@
 # HibernateXML_OneToOne
 
-Hibernate XML One To One
+Hibernate XML One To One.
+_________________________________________________________________________________________________________________
+
 Hibernate One To One Mapping Tutorial (XML Mapping) + Maven 3 + Hibernate 4.3.5.Final + MySQL 5.5 + java 8 
 
 Getting Started
